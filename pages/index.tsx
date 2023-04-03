@@ -17,7 +17,7 @@ export default function Home({ posts }: Props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="h-[calc(100vh_-_64px)] snap-y  space-y-10 overflow-y-scroll bg-black scrollbar-hide">
+      <main className="h-[calc(100vh_-_64px)] snap-y overflow-y-scroll scrollbar-hide">
         <Landing />
         <Card posts={posts} />
         {/* footer */}
