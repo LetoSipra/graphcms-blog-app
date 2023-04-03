@@ -1,6 +1,14 @@
+import Card from "@/components/Card";
+import Landing from "@/components/Landing";
+import { fetchPosts } from "@/utility/fetchPosts";
 import Head from "next/head";
 
-export default function Home() {
+interface Props {
+  posts: Posts[];
+}
+
+export default function Home({ posts }: Props) {
+
   return (
     <>
       <Head>
@@ -9,7 +17,20 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main></main>
+      <main className="h-[calc(100vh_-_64px)] snap-y  space-y-10 overflow-y-scroll bg-black scrollbar-hide">
+        <Landing />
+        <Card posts={posts} />
+        {/* footer */}
+      </main>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const posts = await fetchPosts();
+  return {
+    props: {
+      posts,
+    },
+  };
 }
