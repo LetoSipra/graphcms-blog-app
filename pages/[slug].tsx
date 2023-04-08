@@ -24,7 +24,7 @@ function slug({ post }: Props) {
   return (
     <>
       <main className="h-fit w-full bg-white/10 py-10 ">
-        <div className="max-w-[1000px]  mx-auto border border-white/20 p-5">
+        <div className="max-w-[1000px]  mx-auto border outline outline-white/10 border-white/20 p-5">
           <div className="flex flex-col items-center">
             <img src={post.coverPhoto.url} className="object-contain w-full" alt="" />
             <h1 className="break-words text-center border-white/25 py-10 text-[#00FFFF] font-serif text-5xl">

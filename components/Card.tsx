@@ -11,10 +11,10 @@ function Card({ posts }: Props) {
   return (
     <>
       <section className="relative min-h-screen snap-start scroll-mt-[40px] bg-white/10 pt-10">
-        <div className="mx-2 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 2xl:mx-8">
+        <div className="grid grid-cols-1 gap-8 md:mx-1 md:grid-cols-2 lg:mx-2 xl:grid-cols-3 2xl:mx-9">
           {posts.map((post) => (
-            <div className="mx-auto mb-2 grid space-y-14 sm:px-4">
-              <div className="flex h-[350px] w-[350px] select-none flex-col space-y-3 rounded-xl bg-white/5 p-5 sm:h-[450px] sm:w-[500px] md:h-[500px] md:w-[380px] lg:w-[450px] xl:w-[425px] 2xl:w-[500px]">
+            <div className="mx-auto mb-2 grid space-y-14 sm:px-4 md:px-0 lg:px-4">
+              <div className="flex h-[350px] w-[350px] select-none flex-col space-y-3 rounded-xl bg-white/5 p-5 sm:h-[450px] sm:w-[500px] md:h-[500px] md:w-[375px] lg:w-[450px] xl:w-[425px] 2xl:w-[500px]">
                 <div className="break-words text-xl">
                   <h1 className="">{post.title}</h1>
                 </div>
